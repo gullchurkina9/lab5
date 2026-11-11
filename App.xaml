@@ -1,0 +1,7 @@
+<Application x:Class="LinqCrowdfundingWpf.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" StartupUri="MainWindow.xaml">
+  <Application.Resources>
+    <SolidColorBrush x:Key="Accent" Color="#2563EB"/>
+    <Style TargetType="Button"><Setter Property="Padding" Value="12,8"/><Setter Property="Margin" Value="4"/><Setter Property="Background" Value="#2563EB"/><Setter Property="Foreground" Value="White"/><Setter Property="BorderThickness" Value="0"/><Setter Property="Cursor" Value="Hand"/></Style>
+    <Style TargetType="DataGrid"><Setter Property="AutoGenerateColumns" Value="True"/><Setter Property="CanUserAddRows" Value="False"/><Setter Property="IsReadOnly" Value="True"/><Setter Property="AlternatingRowBackground" Value="#EFF6FF"/><Setter Property="GridLinesVisibility" Value="Horizontal"/></Style>
+  </Application.Resources>
+</Application>

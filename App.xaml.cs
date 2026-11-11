@@ -1,0 +1,1 @@
+namespace LinqCrowdfundingWpf; public partial class App : System.Windows.Application { }

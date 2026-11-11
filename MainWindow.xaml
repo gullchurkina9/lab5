@@ -1,0 +1,30 @@
+<Window x:Class="LinqCrowdfundingWpf.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="CrowdFund Analytics — LINQ" Height="760" Width="1180" MinHeight="620" MinWidth="900"
+ WindowStartupLocation="CenterScreen" Background="#F3F6FB">
+ <Grid Margin="22">
+  <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+  <Border Background="#14213D" CornerRadius="14" Padding="22">
+   <StackPanel><TextBlock Text="CROWDFUND ANALYTICS" Foreground="#93C5FD" FontSize="12" FontWeight="Bold"/>
+    <TextBlock Text="Платформа краудфандинга" Foreground="White" FontSize="27" FontWeight="Bold" Margin="0,5,0,3"/>
+    <TextBlock Text="Демонстрация LINQ: проекты • спонсоры • пожертвования" Foreground="#CBD5E1" FontSize="13"/></StackPanel>
+  </Border>
+  <WrapPanel Grid.Row="1" Margin="0,12,0,10">
+   <Button Content="Пожертвования (Join)" Click="Donations_Click"/>
+   <Button Content="Статистика категорий" Click="Categories_Click"/>
+   <Button Content="Сборы проектов" Click="Totals_Click"/>
+   <Button Content="Спонсоры (GroupJoin)" Click="Backers_Click"/>
+   <Button Content="Фильтрация / Select" Click="Filter_Click"/>
+   <Button Content="Set-операции" Click="Sets_Click"/>
+   <Button Content="Проверки и агрегаты" Click="Checks_Click"/>
+  </WrapPanel>
+  <Border Grid.Row="2" Background="White" CornerRadius="12" Padding="14">
+   <DockPanel>
+    <TextBlock x:Name="ResultTitle" DockPanel.Dock="Top" Text="Результаты запросов" FontSize="18" FontWeight="SemiBold" Foreground="#14213D" Margin="2,0,0,12"/>
+    <DataGrid x:Name="ResultsGrid"/>
+   </DockPanel>
+  </Border>
+  <TextBlock Grid.Row="3" x:Name="StatusText" Margin="4,10,0,0" Foreground="#64748B" Text="Данные: 12 проектов • 12 спонсоров • 20 пожертвований"/>
+ </Grid>
+</Window>
